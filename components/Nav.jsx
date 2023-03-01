@@ -37,7 +37,7 @@ export default function Nav() {
       <Typography
         as="li"
         variant="h4"
-        color="black"
+        color="white"
         className="p-1 font-normal"
       >
         <Link href="/" className="flex items-center">
@@ -48,7 +48,7 @@ export default function Nav() {
       <Typography
         as="li"
         variant="h4"
-        color="black"
+        color="white"
         className="p-1 font-normal"
       >
         <Link href={"/aboutus"} className="flex items-center">
@@ -58,17 +58,17 @@ export default function Nav() {
       <Typography
         as="li"
         variant="h4"
-        color="black"
+        color="white"
         className="p-1 font-normal"
       >
         <Menu>
           <MenuHandler>
             <Button
               ripple={false}
-              className=" capitalize  px-0 font-normal hover:shadow-none shadow-none text-[1rem] text-black bg-transparent flex     items-center  "
+              className=" capitalize  px-0 font-normal hover:shadow-none shadow-none text-[1rem] text-white bg-transparent flex     items-center  "
             >
               Get Involved
-              <IoIosArrowDown className="text-[1rem] text-black  " />
+              <IoIosArrowDown className="text-[1rem] text-white  " />
             </Button>
           </MenuHandler>
           <MenuList>
@@ -98,7 +98,7 @@ export default function Nav() {
       <Typography
         as="li"
         variant="h4"
-        color="black"
+        color="white"
         className="p-1 font-normal"
       >
         <Link href={`/project`} className="flex items-center">
@@ -108,7 +108,7 @@ export default function Nav() {
       <Typography
         as="li"
         variant="h4"
-        color="black"
+        color="white"
         className="p-1 font-normal"
       >
         <Link href={`/invest`} className="flex items-center">
@@ -118,7 +118,7 @@ export default function Nav() {
       <Typography
         as="li"
         variant="h4"
-        color="black"
+        color="white"
         className="p-1 font-normal"
       >
         <Link href={`/donation`} className="flex items-center">
@@ -128,7 +128,7 @@ export default function Nav() {
       <Typography
         as="li"
         variant="h4"
-        color="black"
+        color="white"
         className="p-1 font-normal"
       >
         <Link href={`/contact`} className="flex items-center">
@@ -139,7 +139,7 @@ export default function Nav() {
   );
 
   return (
-    <section className="navbar    sticky z-50 w-[100%]">
+    <section className="navbar  absolute top-0  z-50 w-[100%]">
       <Navbar
         className="mx-auto  max-w-[100%]
         backdrop-blur-none 
@@ -148,7 +148,8 @@ export default function Nav() {
            px-4 lg:px-8 
             shadow-none
             
-             bg-white
+            bg-[#00000060]
+
            outline-0 border-none rounded-none"
       >
         <div className="container shadow-none max-w-[96%]  mx-auto flex items-center justify-between  text-white">

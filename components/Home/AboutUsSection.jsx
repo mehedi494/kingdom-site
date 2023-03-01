@@ -6,12 +6,12 @@ import { BsIntersect } from "react-icons/bs";
 
 function AboutUsSection() {
   return (
-    <section>
+    <section  className="">
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-x-[3rem]">
         <div
           className={`${styles.aboutBg} py-10 
         
-         h-[25rem]
+         h-[25rem] md:h-[50rem]
         
         relative`}
         >
@@ -34,17 +34,17 @@ function AboutUsSection() {
           </div>
         </div>
 
-        <div className=" py-[4rem]  pl-[1rem]">
+        <div className=" py-[4rem]  pl-[1rem] xl:pl-[5rem] xl:py-[8rem] ">
           <div className="content">
             <h4
-              className=" uppercase text-ba
+              className=" uppercase text-ba 
                      "
             >
               About us
             </h4>
             <h1
               className=" font-bold  text-[2.2rem]
-            md:text-heading leading-[3.8rem]"
+            md:text-heading leading-[3.8rem] xl:pr-[20rem]"
             >
               About creating a safe haven
             </h1>
