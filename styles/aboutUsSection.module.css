@@ -1,0 +1,15 @@
+.aboutBg {
+  background-image: url("../img/home.aboutUs.jpg");
+ 
+  background-repeat: no-repeat;
+   background-size: cover;
+   max-height: 44rem;
+}
+
+.smallGroup {
+  background-image: url("../img/home.smallgroup.jpg");
+ 
+  background-repeat: no-repeat;
+   background-size: cover;
+   max-height: 44rem;
+}
