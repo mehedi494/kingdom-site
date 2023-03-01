@@ -12,11 +12,10 @@ module.exports = withMT({
   ],
 
   theme: {
-
     fontFamily: {
-      sans: ['Custom Sans', 'sans-serif'],
-      serif: ['Custom Serif', 'serif'],
-      mono: ['Custom Mono', 'monospace'],
+      sans: ["Custom Sans", "sans-serif"],
+      serif: ["Custom Serif", "serif"],
+      mono: ["Custom Mono", "monospace"],
     },
 
     fontSize: {
@@ -32,6 +31,7 @@ module.exports = withMT({
       primary: "#CB9833",
       white: "#ffffff",
       gray: "#191919",
+      lightGray: "#7f8393",
       softBlack: "#1E1E1E",
       second: "#47B8E7",
       link: "#416DEC",
