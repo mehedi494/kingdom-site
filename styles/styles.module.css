@@ -50,3 +50,10 @@
   background-attachment: left;
 }
 
+
+
+.child_nav:hover > ul{
+
+     transform: translateY(0rem);
+     opacity: 1;
+}

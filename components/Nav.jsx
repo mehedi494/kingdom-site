@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import Style from "../styles/styles.module.css";
+import { RxCross2 } from "react-icons/rx";
+import { AiOutlinePlus } from "react-icons/ai";
 //import next hoc
 import Image from "next/image";
 import Link from "next/link";
@@ -9,7 +12,6 @@ import logo from "../img/logo.png";
 // imports MT
 import {
   Navbar,
-  MobileNav,
   Typography,
   Button,
   Select,
@@ -23,14 +25,7 @@ import {
 import { IoIosArrowDown } from "react-icons/io";
 
 export default function Nav() {
-  const [openNav, setOpenNav] = useState(true);
-
-  // useEffect(() => {
-  //   window.addEventListener(
-  //     "resize",
-  //     () => window.innerWidth >= 960 && setOpenNav(false)
-  //   );
-  // }, []);
+  const [openNav, setOpenNav] = useState(false);
 
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -139,23 +134,21 @@ export default function Nav() {
   );
 
   return (
-    <section className="navbar  absolute top-0  z-50 w-[100%]">
-      <Navbar
-        className="mx-auto  max-w-[100%]
-        backdrop-blur-none 
-         bg-opacity-100
-        py-1
-           px-4 lg:px-8 
-            shadow-none
-            
-            bg-[#00000060]
-
-           outline-0 border-none rounded-none"
-      >
+    <>
+      <div className="navbar  w-[100%]   z-[999] bg-[#0000001a] ">
+        <Navbar
+          className="mx-auto max-w-[100%] backdrop-blur-none bg-opacity-100 py-0 px-4 lg:px-8 shadow-none bg-[#00000060] outline-0 border-none
+        rounded-none"
+        />
         <div className="container shadow-none max-w-[96%]  mx-auto flex items-center justify-between  text-white">
           <div className=" logo__box flex  items-center  space-x-6">
             <div>
-              <span className="  rounded-full p-2   ">
+              <span
+                className="  rounded-full p-2   "
+                onClick={() => {
+                  setOpenNav(true);
+                }}
+              >
                 <CgMenuLeftAlt className=" border-solid hover:border-[1px] border-primary text-[3.2rem] cursor-pointer bg-[#8484842c] rounded-full p-2 transition-all" />
               </span>
             </div>
@@ -173,16 +166,59 @@ export default function Nav() {
             </Select>
           </div>
         </div>
-        {/* <MobileNav open={openNav}>
-          <div className="container mx-auto">
-            {navList}
-            <Button variant="gradient" size="sm" fullWidth className="mb-2">
-              <span>Buy Now</span>
-            </Button>
-          </div>
-        </MobileNav> */}
-      </Navbar>
-    </section>
+      </div>
+
+      <div
+        className={`mobile__menu  w-[100%]    overflow-hidden h-[100%]  top-0 left-0  bg-black  fixed ${
+          openNav ? "block" : "hidden"
+        }  transition-all    duration-500 z-[9999]`}
+      >
+        <div className="menu_wrapper p-10 text-white">
+          <RxCross2
+            className=" text-[1.5rem] cursor-pointer"
+            onClick={() => setOpenNav(false)}
+          />
+          <ul className="  capitalize  flex flex-col space-y-4 mt-6 ml-5">
+            <li className=" font-bold lg:text-[2.5rem] text-[1.5rem] text-[#CB9833] hover:translate-x-4  hover:opacity-70 transition-all duration-300">
+              <Link href={"/"}> Home</Link>
+            </li>
+            <li className=" font-bold lg:text-[2.5rem] text-[1.5rem] hover:translate-x-4  hover:opacity-70 transition-all duration-300">
+              <Link href={"/aboutus"}>About</Link>
+            </li>
+            <li
+              className={`font-bold lg:text-[2.5rem] text-[1.5rem]  hover:translate-x-4  hover:opacity-70 transition-all ${Style.child_nav} duration-300 relative text-[#CB9833] flex  items-center  `}
+            >
+              Get <br />
+              Involved{" "}
+              <AiOutlinePlus className=" ml-[1rem] text-white text-[1.5rem]" />
+              <ul className=" ml-[10rem] translate-y-[6rem]   opacity-0 transition-all  delay-[80ms]  text-[1rem] lg:text-[2.5rem] absolute top-0 lg:left-[8%] left-[10%] text-white">
+                <li>
+                  <Link href={"/membership_applicationt"}>Membership</Link>
+                </li>
+                <li>
+                  <Link href={"/volunteer"}>Volunteer</Link>
+                </li>
+                <li>
+                  <Link href={"/vendor"}>Vendor</Link>
+                </li>
+              </ul>
+            </li>
+            <li className=" font-bold lg:text-[2.5rem] text-[1.5rem] hover:translate-x-4  hover:opacity-70 transition-all duration-300">
+              <Link href={"/project"}>Projects</Link>
+            </li>
+            <li className=" font-bold lg:text-[2.5rem] text-[1.5rem] hover:translate-x-4  hover:opacity-70 transition-all duration-300">
+              <Link href={"/invest"}>Invest</Link>
+            </li>
+            <li className=" font-bold lg:text-[2.5rem] text-[1.5rem] hover:translate-x-4  hover:opacity-70 transition-all duration-300">
+              <Link href={"/donation"}>Donation</Link>
+            </li>
+            <li className=" font-bold lg:text-[2.5rem] text-[1.5rem] hover:translate-x-4  hover:opacity-70 transition-all duration-300">
+              <Link href={"contact"}>Contact</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </>
   );
 }
 

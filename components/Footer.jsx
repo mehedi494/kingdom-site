@@ -29,7 +29,7 @@ export default function Foot() {
               className=" bg-black rounded-md  shadow-none capitalize text-base hover:shadow-none w-[100%]    font-normal text-primary
             "
             >
-              Donation
+              <Link href={"/donation"}>Donation</Link>
             </Button>
           </div>
         </div>
