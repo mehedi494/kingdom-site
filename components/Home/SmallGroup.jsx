@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../styles/aboutUsSection.module.css";
 import { BsIntersect } from "react-icons/bs";
 
-function smallGroup() {
+function SmallGroup() {
   return (
     <section  className="">
     <div className=" grid grid-cols-1 md:grid-cols-2  justify-items-end gap-x-[3rem]">
@@ -70,4 +70,4 @@ function smallGroup() {
   );
 }
 
-export default smallGroup;
+export default SmallGroup;

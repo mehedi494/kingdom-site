@@ -2,7 +2,7 @@ import React from "react";
 // import sections
 import Hero from "./Hero";
 import AboutUsSection from "./AboutUsSection";
-import SmallGroup from "./smallGroup";
+import SmallGroup from "./SmallGroup";
 import FutureGoverning from "./FutureGoverning";
 import WorkInquiries from "./WorkInquiries";
 import GoverningKingdom from "./GoverningKingdom";
