@@ -26,6 +26,18 @@ import { IoIosArrowDown } from "react-icons/io";
 export default function Nav() {
   const [openNav, setOpenNav] = useState(false);
 
+
+  const windowRef = React.useRef(window);
+
+   useEffect(()=>{
+
+ 
+  
+    
+
+   },[])
+
+
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <Typography
@@ -141,7 +153,7 @@ export default function Nav() {
   return (
     <>
       <div className=" w-[100%]   bg-[#00000050] absolute top-0 left-0 z-[999] ">
-        <div className="container shadow-none max-w-[96%]  mx-auto flex items-center justify-between  ">
+        <div className="container shadow-none max-w-[96%]  h-[5rem]  mx-auto flex items-center justify-between  ">
           <div className=" logo__box flex  items-center   space-x-6">
             <div>
               <span
@@ -170,7 +182,6 @@ export default function Nav() {
           </div>
         </div>
       </div>
-
       <div
         className={`mobile__menu  w-[100%]  overflow-hidden h-[100%]  top-0 left-0  bg-black  fixed ${openNav ? "block" : "hidden"
           }  transition-all    duration-500 z-[9999]`}
