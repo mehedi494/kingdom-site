@@ -4,7 +4,7 @@ import YoutubeStyles from "../../styles/youtube.module.css";
 
 function Hero() {
   return (
-    <section>
+    <section className="Hero">
       <div
         className={`${YoutubeStyles.youtubeContainer} relative  w-[100%] h-[100vh]  max-h-[40rem]  md:max-h-[100vh] `}
       >

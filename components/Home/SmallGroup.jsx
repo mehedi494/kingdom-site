@@ -1,72 +1,45 @@
 import React from "react";
-import styles from "../../styles/aboutUsSection.module.css";
-import { BsIntersect } from "react-icons/bs";
+import Styles from "../../styles/styles.module.css";
 
 function SmallGroup() {
   return (
-    <section  className="">
-    <div className=" grid grid-cols-1 md:grid-cols-2  justify-items-end gap-x-[3rem]">
-    <div className=" py-[4rem]  pl-[1rem] xl:pl-[5rem] xl:py-[8rem] ">
-        <div className="content">
-          <h4
-            className=" uppercase text-ba 
-                   "
-          >
-            About us
-          </h4>
-          <h1
-            className=" font-bold  text-[2.2rem]
-          md:text-heading leading-[3.8rem] xl:pr-[20rem]"
-          >
-            About creating a safe haven
-          </h1>
-          <p className=" text-[15px] mt-7 pr-[3rem] xl:pr-[25rem] leading-relaxed ">
-            Over the past 22 years, a small renaissance group started
-            envisioning together about creating a safe haven, a new society,
-            with a common goal to give a path to all who come in good will
-            looking for a better life, not a place to take-away opportunities
-            from others. Bir Tawil, located between Egypt and Sudan, is a land
-            that has not been claimed by any state. Under international law it
-            is known as Terra Nullius, a “no man’s land.” It is a historically
-            significant region which formerly has been part of the legendary
-            Kingdom of Kush. It is now home to an inspiring resurrectional
-            plan to create the next Dubai-like Kingdom of Kush – a social
-            development, where opportunity aligns with the need for innovative
-            infrastructure, sustainable housing, renewable energy, clean
-            water, and localized food security.
-          </p>
-        </div>
-      </div>
-     
-      <div
-        className={`${styles.aboutBg} py-10 
-      
-       h-[25rem] md:h-[50rem]
-      
-      relative`}
-      >
-        <div
-          className="  h-[11rem] w-[17rem]  flex  justify-start   bottom-0 right-0 absolute  bg-[#000]
-           "
-        >
-          <div className="text-primary flex flex-col pl-[2rem] justify-center  ">
-            <div className=" flex items-center  space-x-3">
-              <BsIntersect className=" text-white text-[1.5rem]" />
-
-              <p className=" text-[2rem] font-bold">22+</p>
-            </div>
-
-            <p className="text-primary font-bold">
-              Over the past <br />
-              22 years
+    <section className="SmallGroup">
+      <div className="  grid grid-cols-1 md:grid-cols-2 ">
+        <div className=" py-[4rem] 2xl:pl-[19rem] pl-[1rem] md:pl-[2rem] px-[2rem] md:px-[0]  ">
+          <div className="content  xl:pr-[6rem] pt-[5rem] ">
+            <p className=" text-[15px] mt-7  leading-relaxed  ">
+              WHAT STARTED AS A SMALL GROUP OF ENTHUSIASTS FROM ALL WALKS OF
+              LIFE HAS OVER THE PAST TWO DECADES TRANSFORMED INTO A MASSIVE
+              LIVING ORGANISM OF VOLUNTEERS.
+            </p>
+            <p className=" text-[15px] mt-7  leading-relaxed pr-[3rem]  ">
+              What started as a small group of enthusiasts from all walks of
+              life has over the past two decades transformed into a massive
+              living organism of volunteers. These volunteers have one common
+              goal – to make their vision of the Kingdom of Kush a reality, with
+              all efforts passionately undertaken in a decentralized but very
+              methodical and cohesive manner due to the noble nature of the
+              cause. The Kingdom of Kush is an “open-source” smart city state,
+              inviting all to take part in creating access to prosperity and
+              well-being for present and future generations to come. Many
+              countries have already expressed unequivocal recognition and
+              support for the new nation and our ethos which at its core
+              embodies intercultural diversity, and the value of human
+              connection. This will not be a place that values one race or
+              religion over another but will offer inclusivity to all people.
+              Diverse cultural expressions in music, art, film, culinary arts,
+              and sports will weave every participating culture into this
+              beautiful tapestry which we hope to share with the world through
+              satellite Kingdom of Kush micro-communities soon.
             </p>
           </div>
         </div>
-      </div>
 
-     
-    </div>
-  </section>
+        <div
+          className={`${Styles.smallGroupBg} py-10  min-h-[25rem] md:min-h-[50rem] `}
+        ></div>
+      </div>
+    </section>
   );
 }
 

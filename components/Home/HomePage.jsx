@@ -5,10 +5,14 @@ import AboutUsSection from "./AboutUsSection";
 import SmallGroup from "./SmallGroup";
 import FutureGoverning from "./FutureGoverning";
 import WorkInquiries from "./WorkInquiries";
-import GoverningKingdom from "./GoverningKingdom";
 import FindOpportunintes from "./FindOpportunintes";
 import GoverningStructure from "./GoverningStructure";
-import BusinessVariation from "./BusinessVariation";
+import FutureGoverningNext from "./FutureGoverningNext";
+import BloomingVison from "./BloomingVison";
+import KingdomInitiator from "./KingdomInitiator";
+import VariousInfrastructure from "./VariousInfrastructure";
+import GetInvolved from "./GetInvolved";
+import GetInTouch from "./GetInTouch";
 
 function HomePage() {
   return (
@@ -17,11 +21,16 @@ function HomePage() {
       <AboutUsSection />
       <SmallGroup />
       <FutureGoverning />
+      <FutureGoverningNext />
       <WorkInquiries />
-      <GoverningKingdom />
+      <GoverningStructure />
       <FindOpportunintes />
       <GoverningStructure />
-      <BusinessVariation/>
+      <BloomingVison />
+      <KingdomInitiator />
+      <VariousInfrastructure />
+      <GetInvolved />
+      <GetInTouch />
     </section>
   );
 }

@@ -1,20 +1,19 @@
-
-.commonBg{
+.commonBg {
   width: 100%;
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
- 
 }
 
 .workBg {
   background-image: url("../img/work.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: left;
+  background-attachment: top;
+  background-position: center;
 }
 
-.basicInfoBg{
+.basicInfoBg {
   width: 100%;
   height: 100%;
   background-image: url("../img/aboutus/oh__img150-1.jpg");
@@ -23,7 +22,7 @@
   background-attachment: left;
 }
 
-.moreInfoBg{
+.moreInfoBg {
   width: 100%;
   height: 100%;
   background-image: url("../img/aboutus/oh__img152-1.jpg");
@@ -32,7 +31,7 @@
   background-attachment: left;
 }
 
-.flagLangfoBg{
+.flagLangfoBg {
   width: 100%;
   height: 100%;
   background-image: url("../img/aboutus/oh__img155-1-scaled.jpg");
@@ -41,7 +40,7 @@
   background-attachment: left;
 }
 
-.vulunteerBg{
+.vulunteerBg {
   width: 100%;
   height: 100%;
   background-image: url("../img/clipboard.png");
@@ -51,9 +50,40 @@
 }
 
 
+.aboutBg {
+  background-image: url("../img/home.aboutUs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
 
-.child_nav:hover > ul{
 
-     transform: translateY(0rem);
-     opacity: 1;
+.smallGroupBg {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/home.smallgroup.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: left;
+}
+.findBg {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/aboutus/oh__img158-1-scaled.jpg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: left;
+}
+.GetBg {
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/aboutus/getIntouchBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: left;
+}
+
+.child_nav:hover > ul {
+  transform: translateY(0rem);
+  opacity: 1;
 }

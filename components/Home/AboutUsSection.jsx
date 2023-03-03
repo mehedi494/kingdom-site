@@ -1,15 +1,13 @@
 import React from "react";
-import aboutImage from "../../img/home.aboutUs.jpg";
-import Image from "next/image";
-import styles from "../../styles/aboutUsSection.module.css";
+import Styles from "../../styles/styles.module.css"
 import { BsIntersect } from "react-icons/bs";
 
 function AboutUsSection() {
   return (
-    <section  className="">
+    <section  className="AboutUsSection">
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-x-[3rem]">
         <div
-          className={`${styles.aboutBg} py-10 
+          className={`${Styles.aboutBg} py-10 
         
          h-[25rem] md:h-[50rem]
         
@@ -34,7 +32,7 @@ function AboutUsSection() {
           </div>
         </div>
 
-        <div className=" py-[4rem]  pl-[1rem] xl:pl-[5rem] xl:py-[8rem] ">
+        <div className=" py-[4rem]  pl-[1rem] xl:pl-[5rem]  ">
           <div className="content">
             <h4
               className=" uppercase text-ba 
@@ -44,11 +42,11 @@ function AboutUsSection() {
             </h4>
             <h1
               className=" font-bold  text-[2.2rem]
-            md:text-heading leading-[3.8rem] xl:pr-[20rem]"
+            md:text-heading leading-[3.8rem] 2xl:pr-[20rem]"
             >
               About creating a safe haven
             </h1>
-            <p className=" text-[15px] mt-7 pr-[3rem] xl:pr-[25rem] leading-relaxed ">
+            <p className=" text-[15px] mt-7 pr-[3rem] 2xl:pr-[25rem] leading-relaxed ">
               Over the past 22 years, a small renaissance group started
               envisioning together about creating a safe haven, a new society,
               with a common goal to give a path to all who come in good will

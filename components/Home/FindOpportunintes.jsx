@@ -1,37 +1,85 @@
- import React from 'react'
- import styles from "../../styles/aboutUsSection.module.css";
-import { BsIntersect } from "react-icons/bs";
+import React, { useState } from "react";
+import Styles from "../../styles/styles.module.css";
 
- function FindOpportunintes() {
-   return (
-    <section>
-    <div className=" grid grid-cols-1 md:grid-cols-2 gap-x-[3rem]">
-    
-    <div className=" py-[1rem]  pl-[1rem]">
-        <div className="content">
-          <p
-            className=" text-base
-            md:text-heading leading-relaxed"
-          >
-           WHAT STARTED AS A SMALL GROUP OF ENTHUSIASTS FROM ALL WALKS OF LIFE HAS OVER THE PAST TWO DECADES TRANSFORMED INTO A MASSIVE LIVING ORGANISM OF VOLUNTEERS.
-          </p>
-          <p className=" text-base mt-7 pr-[3rem] xl:pr-[25rem] leading-relaxed ">
-          What started as a small group of enthusiasts from all walks of life has over the past two decades transformed into a massive living organism of volunteers. These volunteers have one common goal – to make their vision of the Kingdom of Kush a reality, with all efforts passionately undertaken in a decentralized but very methodical and cohesive manner due to the noble nature of the cause. The Kingdom of Kush is an “open-source” smart city state, inviting all to take part in creating access to prosperity and well-being for present and future generations to come. Many countries have already expressed unequivocal recognition and support for the new nation and our ethos which at its core embodies intercultural diversity, and the value of human connection. This will not be a place that values one race or religion over another but will offer inclusivity to all people. Diverse cultural expressions in music, art, film, culinary arts, and sports will weave every participating culture into this beautiful tapestry which we hope to share with the world through satellite Kingdom of Kush micro-communities soon.
-          </p>
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from "@material-tailwind/react";
+
+function FindOpportunintes() {
+  const [open, setOpen] = useState(0);
+
+  const handleOpen = (value) => {
+    setOpen(open === value ? 0 : value);
+  };
+
+  return (
+    <section className="FindOpportunintes">
+      <div className="  transition-all duration-800 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 ">
+        <div className=" py-[4rem]  2xl:pl-[16.5rem] pl-[1rem] md:pl-[2rem] px-[2rem] md:px-[0]  ">
+          <div className="content   pt-[5rem] ">
+            <h1 className=" text-[2rem] xl:text-[3rem] mb-8 font-bold  leading-tight">
+              Find The Opportunities And a Better Future in Africa.
+            </h1>
+            <Accordion open={open === 1}>
+              <AccordionHeader
+                onClick={() => handleOpen(1)}
+                className="text-base text-left border-b-0 [&>span]:ml-0  justify-end flex-row-reverse text-black"
+              >
+                There will be no need for African people
+              </AccordionHeader>
+
+              <AccordionBody className="text-base ">
+                to leave the continent searching for a better future. The
+                continent has more than sufficient resources to explore and
+                develop, thus creating endless opportunities for a better life
+                on the continent itself.{" "}
+                <b className="font-bold">
+                  It’s all about adding value to endless available resources on
+                  the continent itself, not simply exporting the resources and
+                  with this all the jobs and related opportunities to other
+                  countries .
+                </b>{" "}
+                The future is now. The new generation must take charge of their
+                own destiny because it can and we believe will do so, as this is
+                the only way to make Africa what it can be, not what it has
+                been.
+              </AccordionBody>
+            </Accordion>
+            <Accordion open={open === 2}>
+              <AccordionHeader
+                onClick={() => handleOpen(2)}
+                className="text-base border-b-0 [&>span]:ml-0    justify-end flex-row-reverse pb-2 text-black text-left"
+              >
+              Africa does not need aid or to borrow money that others generated
+              </AccordionHeader>
+
+              <AccordionBody className="text-base ">
+              by taking resources from Africa. Africa and its people have everything needed to lead and support the world. Let’s make this happen together now! Join the movement of this growing Kingdom which has attracted from over 33 countries impact driven volunteers, talented professionals, service providers and strategic partners to collaborate, share a common vision, and explore the possibilities involved with building a sustainable future for generations to live, work, and appreciate life.
+              </AccordionBody>
+            </Accordion>
+            <Accordion open={open === 3}>
+              <AccordionHeader
+                onClick={() => handleOpen(3)}
+                className="text-base border-b-0 [&>span]:ml-0  justify-end flex-row-reverse pb-2 text-black text-left"
+              >
+             Our diverse multi-generational community culture celebrates
+              </AccordionHeader>
+
+              <AccordionBody className="text-base ">
+              a lifelong learning approach to sustainable living with access to trade skills training, internships, and mentorship programs to support career opportunities. Building a viable and innovative labor force will involve an integrative approach to pairing skills training, and industrial development with operating entities in the region.
+              </AccordionBody>
+            </Accordion>
+          </div>
         </div>
-      </div>
-      <div
-        className={`${styles.smallGroup} py-10 
-        
-         h-[25rem]
-        
-        `}
-      ></div>
 
-      
-    </div>
-  </section>
-   )
- }
- 
- export default FindOpportunintes
+        <div
+          className={`${Styles.findBg} 2xl:ml-[12rem] 2xl:col-span-2 min-h-[25rem] xl:min-h-[40rem] `}
+        ></div>
+      </div>
+    </section>
+  );
+}
+
+export default FindOpportunintes;
