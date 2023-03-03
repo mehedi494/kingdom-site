@@ -27,15 +27,17 @@ export default function Nav() {
   const [openNav, setOpenNav] = useState(false);
 
 
-  const windowRef = React.useRef(window);
 
-   useEffect(()=>{
+  useEffect(() => {
 
- 
-  
-    
 
-   },[])
+    if (typeof window !== "undefined") {
+      var width = window.innerWidth; 
+       console.log(width);   
+   }
+
+
+  }, [])
 
 
   const navList = (
@@ -177,7 +179,7 @@ export default function Nav() {
               <Option>English</Option>
               <Option>Spanish</Option>
               <Option>Urdho</Option>
-             
+
             </Select>
           </div>
         </div>
@@ -215,6 +217,9 @@ export default function Nav() {
                   <Link href={"/vendor"}>Vendor</Link>
                 </li>
               </ul>
+            </li>
+            <li className=" font-bold lg:text-[2.5rem] text-[1.5rem] hover:translate-x-4  hover:opacity-70 transition-all duration-300">
+              <Link href={"/petition"}>Petition</Link>
             </li>
             <li className=" font-bold lg:text-[2.5rem] text-[1.5rem] hover:translate-x-4  hover:opacity-70 transition-all duration-300">
               <Link href={"/project"}>Projects</Link>
