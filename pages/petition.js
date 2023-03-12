@@ -3,7 +3,10 @@ import Layout from '@/components/Layout'
 
 function petition() {
     return (
-        <Layout title={"petition"}>petition</Layout>
+        <Layout title={"petition"}>
+
+            <h1>this project file </h1>
+        </Layout>
     )
 }
 
